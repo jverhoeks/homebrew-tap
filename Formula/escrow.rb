@@ -14,14 +14,14 @@ class Escrow < Formula
            "-trimpath",
            "./cmd/escrow"
 
-    # Install default config to $(brew --prefix)/etc/escrow/sentinel.toml
+    # Install default config to $(brew --prefix)/etc/escrow/escrow.toml
     (etc/"escrow").mkpath
-    (etc/"escrow"/"sentinel.toml").write default_config unless (etc/"escrow"/"sentinel.toml").exist?
+    (etc/"escrow"/"escrow.toml").write default_config unless (etc/"escrow"/"escrow.toml").exist?
   end
 
   # Runs as a background service via `brew services start escrow`
   service do
-    run [opt_bin/"escrow", "--config=#{etc}/escrow/sentinel.toml"]
+    run [opt_bin/"escrow", "--config=#{etc}/escrow/escrow.toml"]
     keep_alive true
     log_path     var/"log/escrow.log"
     error_log_path var/"log/escrow.log"
@@ -35,7 +35,7 @@ class Escrow < Formula
   def caveats
     <<~EOS
       Escrow config is at:
-        #{etc}/escrow/sentinel.toml
+        #{etc}/escrow/escrow.toml
 
       Edit it to enable ecosystems and set your policy, then start the service:
         brew services start escrow
@@ -56,7 +56,7 @@ class Escrow < Formula
   test do
     # Start escrow in background and verify it responds
     port = free_port
-    config = testpath/"sentinel.toml"
+    config = testpath/"escrow.toml"
     config.write <<~TOML
       [server]
         host = "127.0.0.1"
