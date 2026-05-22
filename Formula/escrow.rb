@@ -1,8 +1,8 @@
 class Escrow < Formula
   desc "Supply-chain package proxy — age gate, OSV scan, and file caching for 7 ecosystems"
   homepage "https://github.com/jverhoeks/escrow"
-  url "https://github.com/jverhoeks/escrow/archive/refs/tags/v1.5.2.tar.gz"
-  sha256 "265071b5626f44921bc5d351b1a2b3a10f0c8282074972b55cccff4684d3aeb9"
+  url "https://github.com/jverhoeks/escrow/archive/refs/tags/v1.5.3.tar.gz"
+  sha256 "fab69bc759390ed9e98531e4250a9eed24d662c8dcca38acb7d5be7bda60139e"
   license "MIT"
   head "https://github.com/jverhoeks/escrow.git", branch: "main"
 
@@ -13,6 +13,12 @@ class Escrow < Formula
            *std_go_args(ldflags: "-s -w -X main.version=#{version}"),
            "-trimpath",
            "./cmd/escrow"
+
+    system "go", "build",
+           "-o", bin/"escrow-cli",
+           "-ldflags", "-s -w -X main.version=#{version}",
+           "-trimpath",
+           "./cmd/escrow-cli"
 
     # Install default config to $(brew --prefix)/etc/escrow/escrow.toml
     (etc/"escrow").mkpath
