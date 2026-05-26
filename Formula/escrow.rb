@@ -1,8 +1,8 @@
 class Escrow < Formula
   desc "Supply-chain package proxy — age gate, OSV scan, and file caching for 7 ecosystems"
   homepage "https://github.com/jverhoeks/escrow"
-  url "https://github.com/jverhoeks/escrow/archive/refs/tags/v1.6.0.tar.gz"
-  sha256 "8b7df4fc5271c67a53fdaf0b8480fc7b772b86db094eb0c5e23c8277e359cfb5"
+  url "https://github.com/jverhoeks/escrow/archive/refs/tags/v1.7.0.tar.gz"
+  sha256 "732df96389147c1e8a69d0b30199200971f12f97717c050e9adfb01c4ed9a8b8"
   license "MIT"
   head "https://github.com/jverhoeks/escrow.git", branch: "main"
 
@@ -119,9 +119,11 @@ class Escrow < Formula
       # Dashboard: http://localhost:7888/dashboard  (credentials printed on first start)
 
       [server]
-        host      = "127.0.0.1"
-        port      = 7888
-        log_level = "info"
+        host               = "127.0.0.1"
+        port               = 7888
+        log_level          = "info"
+        access_log_path    = "~/.cache/escrow/access.log"
+        access_log_max_days = 30
 
       [storage]
         backend = "disk"
