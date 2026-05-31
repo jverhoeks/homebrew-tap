@@ -1,8 +1,8 @@
 class Escrow < Formula
   desc "Supply-chain package proxy — age gate, OSV scan, and file caching for 7 ecosystems"
   homepage "https://github.com/jverhoeks/escrow"
-  url "https://github.com/jverhoeks/escrow/archive/refs/tags/v1.8.1.tar.gz"
-  sha256 "d77cfdd9351ef492d01d4662b1ea43272eb6ab8c3aedc678ded4354067d5d5b6"
+  url "https://github.com/jverhoeks/escrow/archive/refs/tags/v1.8.2.tar.gz"
+  sha256 "079eb40f24654f9c2760fa2d971ab7fb9b7a5918bf07c8278b3e3721b148327f"
   license "MIT"
   head "https://github.com/jverhoeks/escrow.git", branch: "main"
 
@@ -58,6 +58,9 @@ class Escrow < Formula
       The service runs as your user account. Its data directory and logs are:
         #{var}/escrow
         #{var}/log/escrow.log
+
+      After upgrading escrow, restart the service to run the new version:
+        brew services restart escrow
 
       Dashboard (after first start):
         http://localhost:7888/dashboard
