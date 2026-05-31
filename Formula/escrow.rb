@@ -1,8 +1,8 @@
 class Escrow < Formula
   desc "Supply-chain package proxy — age gate, OSV scan, and file caching for 7 ecosystems"
   homepage "https://github.com/jverhoeks/escrow"
-  url "https://github.com/jverhoeks/escrow/archive/refs/tags/v1.8.0.tar.gz"
-  sha256 "9a46ebf358504a42931e0a587a82488bf10e675dd365ebca4a7b619c9ac49372"
+  url "https://github.com/jverhoeks/escrow/archive/refs/tags/v1.8.1.tar.gz"
+  sha256 "d77cfdd9351ef492d01d4662b1ea43272eb6ab8c3aedc678ded4354067d5d5b6"
   license "MIT"
   head "https://github.com/jverhoeks/escrow.git", branch: "main"
 
