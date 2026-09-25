@@ -1,6 +1,6 @@
 cask "convey" do
-  version "0.2.1"
-  sha256 "f53447284e8deecfa77ad37f71afad1eb16fae3a87a08e9da308be93298c4e14"
+  version "0.2.2"
+  sha256 "c8a648d52cef4f7e4feedb8ce483a46d45752b54b993d662d13e8f26480c9c10"
 
   url "https://github.com/jverhoeks/convey-clipboard/releases/download/v#{version}/Convey-v#{version}-macos-universal.zip"
   name "Convey"
