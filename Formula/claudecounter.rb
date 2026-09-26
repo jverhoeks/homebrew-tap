@@ -35,7 +35,7 @@ class Claudecounter < Formula
   end
 
   test do
-    # No --version flag; Go's flag package exits 2 on --help.
-    assert_match "sources-config", shell_output("#{bin}/claudecounter --help 2>&1", 2)
+    # No --version flag; --help lists the flags and exits 0.
+    assert_match "sources-config", shell_output("#{bin}/claudecounter --help 2>&1")
   end
 end
