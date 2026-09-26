@@ -2,6 +2,16 @@
 
 Homebrew tap for [jverhoeks](https://github.com/jverhoeks) tools.
 
+## Install claudecounter
+
+```bash
+brew tap jverhoeks/tap
+brew install claudecounter              # terminal TUI (macOS + Linux)
+brew install --cask claudecounter-bar   # macOS menu bar app + dashboard (Apple Silicon)
+```
+
+Updated automatically on each release → [github.com/jverhoeks/claudecounter](https://github.com/jverhoeks/claudecounter)
+
 ## Install escrow
 
 ```bash
