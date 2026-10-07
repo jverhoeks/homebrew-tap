@@ -4,8 +4,8 @@
 # published release and writes the result to Casks/claudecounter-bar.rb
 # in jverhoeks/homebrew-tap. Edit this file, not the tap copy.
 cask "claudecounter-bar" do
-  version "1.10.0"
-  sha256 "aaeb29e0be3735357eb19d133afb636e084b45d9aa360f4455af35e1a5d9c21d"
+  version "1.11.0"
+  sha256 "145248933202b7cc58c7779d71d67ee930f56bc5beae094b693fbc6d89d25be4"
 
   url "https://github.com/jverhoeks/claudecounter/releases/download/v#{version}/ClaudeCounterBar-v#{version}-macos-arm64.zip"
   name "Claude Counter"

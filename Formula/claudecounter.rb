@@ -6,27 +6,27 @@
 class Claudecounter < Formula
   desc "Live terminal spend tracker for Claude Code, Codex and Grok"
   homepage "https://github.com/jverhoeks/claudecounter"
-  version "1.10.0"
+  version "1.11.0"
 
   on_macos do
     on_arm do
       url "https://github.com/jverhoeks/claudecounter/releases/download/v#{version}/claudecounter-darwin-arm64"
-      sha256 "9c7baf0983b398a7883552183ec915dd5ea3e3491b4027693b65af17df8d9d4f"
+      sha256 "cab702b95060f2788d9847d3cf9c84015f7a8402f149638c7de199ff84e089cf"
     end
     on_intel do
       url "https://github.com/jverhoeks/claudecounter/releases/download/v#{version}/claudecounter-darwin-amd64"
-      sha256 "32aa775d631d30c972a36a30bbfbda01f2420195e928494418b02e1abb25c358"
+      sha256 "32ba0dee84348796879282e6f93ed0c0b983181237ff6481f0d498fc20682847"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/jverhoeks/claudecounter/releases/download/v#{version}/claudecounter-linux-arm64"
-      sha256 "e36890ff2c25bd9c8716f81dba0d30a1f83f7e1d7c76399062341385e4aafbf4"
+      sha256 "1ae65617a1ce995f085c449a97602c24055a779fa92ae751e5a1e2cd9c8663e5"
     end
     on_intel do
       url "https://github.com/jverhoeks/claudecounter/releases/download/v#{version}/claudecounter-linux-amd64"
-      sha256 "cec06eab0576823dc7e286de70ca2493e1afa06a3f044038ec10b47c5a05760e"
+      sha256 "a8c1bc4eddfb295eb880a66131ab09b27334cbf9afecbfe04f47d2ed7254090f"
     end
   end
 
